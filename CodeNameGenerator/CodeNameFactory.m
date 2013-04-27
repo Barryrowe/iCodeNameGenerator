@@ -75,6 +75,9 @@
         [searchArray addObjectsFromArray:[self verbs]];
     }
     
+    if(maxIndex < 1){
+        return @"Dammit Melvin!";
+    }
     int targetA = rand() % maxIndex;
     int targetB = rand() % maxIndex;
     while(targetB == targetA){
