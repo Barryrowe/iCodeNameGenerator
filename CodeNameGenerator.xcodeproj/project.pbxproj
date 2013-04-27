@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C132BC2172B649200CB4DCB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C132BC1172B649200CB4DCB /* UIKit.framework */; };
+		4C132BC4172B649200CB4DCB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C132BC3172B649200CB4DCB /* Foundation.framework */; };
+		4C132BC6172B649200CB4DCB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C132BC5172B649200CB4DCB /* CoreGraphics.framework */; };
+		4C132BCC172B649200CB4DCB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C132BCA172B649200CB4DCB /* InfoPlist.strings */; };
+		4C132BCE172B649200CB4DCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C132BCD172B649200CB4DCB /* main.m */; };
+		4C132BD2172B649200CB4DCB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C132BD1172B649200CB4DCB /* AppDelegate.m */; };
+		4C132BD4172B649200CB4DCB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C132BD3172B649200CB4DCB /* Default.png */; };
+		4C132BD6172B649200CB4DCB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C132BD5172B649200CB4DCB /* Default@2x.png */; };
+		4C132BD8172B649200CB4DCB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4C132BD7172B649200CB4DCB /* Default-568h@2x.png */; };
+		4C132BDB172B649200CB4DCB /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C132BD9172B649200CB4DCB /* MainStoryboard_iPhone.storyboard */; };
+		4C132BDE172B649200CB4DCB /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C132BDC172B649200CB4DCB /* MainStoryboard_iPad.storyboard */; };
+		4C132BE1172B649200CB4DCB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C132BE0172B649200CB4DCB /* ViewController.m */; };
+		4C132BE9172B649300CB4DCB /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C132BE8172B649300CB4DCB /* SenTestingKit.framework */; };
+		4C132BEA172B649300CB4DCB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C132BC1172B649200CB4DCB /* UIKit.framework */; };
+		4C132BEB172B649300CB4DCB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C132BC3172B649200CB4DCB /* Foundation.framework */; };
+		4C132BF3172B649300CB4DCB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C132BF1172B649300CB4DCB /* InfoPlist.strings */; };
+		4C132BF6172B649300CB4DCB /* CodeNameGeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C132BF5172B649300CB4DCB /* CodeNameGeneratorTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4C132BEC172B649300CB4DCB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4C132BB6172B649200CB4DCB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C132BBD172B649200CB4DCB;
+			remoteInfo = CodeNameGenerator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4C132BBE172B649200CB4DCB /* CodeNameGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CodeNameGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C132BC1172B649200CB4DCB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4C132BC3172B649200CB4DCB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4C132BC5172B649200CB4DCB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		4C132BC9172B649200CB4DCB /* CodeNameGenerator-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CodeNameGenerator-Info.plist"; sourceTree = "<group>"; };
+		4C132BCB172B649200CB4DCB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4C132BCD172B649200CB4DCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4C132BCF172B649200CB4DCB /* CodeNameGenerator-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CodeNameGenerator-Prefix.pch"; sourceTree = "<group>"; };
+		4C132BD0172B649200CB4DCB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4C132BD1172B649200CB4DCB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4C132BD3172B649200CB4DCB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		4C132BD5172B649200CB4DCB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		4C132BD7172B649200CB4DCB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		4C132BDA172B649200CB4DCB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		4C132BDD172B649200CB4DCB /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		4C132BDF172B649200CB4DCB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4C132BE0172B649200CB4DCB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4C132BE7172B649300CB4DCB /* CodeNameGeneratorTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CodeNameGeneratorTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C132BE8172B649300CB4DCB /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		4C132BF0172B649300CB4DCB /* CodeNameGeneratorTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CodeNameGeneratorTests-Info.plist"; sourceTree = "<group>"; };
+		4C132BF2172B649300CB4DCB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		4C132BF4172B649300CB4DCB /* CodeNameGeneratorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CodeNameGeneratorTests.h; sourceTree = "<group>"; };
+		4C132BF5172B649300CB4DCB /* CodeNameGeneratorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeNameGeneratorTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4C132BBB172B649200CB4DCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C132BC2172B649200CB4DCB /* UIKit.framework in Frameworks */,
+				4C132BC4172B649200CB4DCB /* Foundation.framework in Frameworks */,
+				4C132BC6172B649200CB4DCB /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C132BE3172B649300CB4DCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C132BE9172B649300CB4DCB /* SenTestingKit.framework in Frameworks */,
+				4C132BEA172B649300CB4DCB /* UIKit.framework in Frameworks */,
+				4C132BEB172B649300CB4DCB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4C132BB5172B649200CB4DCB = {
+			isa = PBXGroup;
+			children = (
+				4C132BC7172B649200CB4DCB /* CodeNameGenerator */,
+				4C132BEE172B649300CB4DCB /* CodeNameGeneratorTests */,
+				4C132BC0172B649200CB4DCB /* Frameworks */,
+				4C132BBF172B649200CB4DCB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4C132BBF172B649200CB4DCB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4C132BBE172B649200CB4DCB /* CodeNameGenerator.app */,
+				4C132BE7172B649300CB4DCB /* CodeNameGeneratorTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4C132BC0172B649200CB4DCB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C132BC1172B649200CB4DCB /* UIKit.framework */,
+				4C132BC3172B649200CB4DCB /* Foundation.framework */,
+				4C132BC5172B649200CB4DCB /* CoreGraphics.framework */,
+				4C132BE8172B649300CB4DCB /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C132BC7172B649200CB4DCB /* CodeNameGenerator */ = {
+			isa = PBXGroup;
+			children = (
+				4C132BD0172B649200CB4DCB /* AppDelegate.h */,
+				4C132BD1172B649200CB4DCB /* AppDelegate.m */,
+				4C132BD9172B649200CB4DCB /* MainStoryboard_iPhone.storyboard */,
+				4C132BDC172B649200CB4DCB /* MainStoryboard_iPad.storyboard */,
+				4C132BDF172B649200CB4DCB /* ViewController.h */,
+				4C132BE0172B649200CB4DCB /* ViewController.m */,
+				4C132BC8172B649200CB4DCB /* Supporting Files */,
+			);
+			path = CodeNameGenerator;
+			sourceTree = "<group>";
+		};
+		4C132BC8172B649200CB4DCB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C132BC9172B649200CB4DCB /* CodeNameGenerator-Info.plist */,
+				4C132BCA172B649200CB4DCB /* InfoPlist.strings */,
+				4C132BCD172B649200CB4DCB /* main.m */,
+				4C132BCF172B649200CB4DCB /* CodeNameGenerator-Prefix.pch */,
+				4C132BD3172B649200CB4DCB /* Default.png */,
+				4C132BD5172B649200CB4DCB /* Default@2x.png */,
+				4C132BD7172B649200CB4DCB /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4C132BEE172B649300CB4DCB /* CodeNameGeneratorTests */ = {
+			isa = PBXGroup;
+			children = (
+				4C132BF4172B649300CB4DCB /* CodeNameGeneratorTests.h */,
+				4C132BF5172B649300CB4DCB /* CodeNameGeneratorTests.m */,
+				4C132BEF172B649300CB4DCB /* Supporting Files */,
+			);
+			path = CodeNameGeneratorTests;
+			sourceTree = "<group>";
+		};
+		4C132BEF172B649300CB4DCB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4C132BF0172B649300CB4DCB /* CodeNameGeneratorTests-Info.plist */,
+				4C132BF1172B649300CB4DCB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4C132BBD172B649200CB4DCB /* CodeNameGenerator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C132BF9172B649300CB4DCB /* Build configuration list for PBXNativeTarget "CodeNameGenerator" */;
+			buildPhases = (
+				4C132BBA172B649200CB4DCB /* Sources */,
+				4C132BBB172B649200CB4DCB /* Frameworks */,
+				4C132BBC172B649200CB4DCB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CodeNameGenerator;
+			productName = CodeNameGenerator;
+			productReference = 4C132BBE172B649200CB4DCB /* CodeNameGenerator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4C132BE6172B649300CB4DCB /* CodeNameGeneratorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C132BFC172B649300CB4DCB /* Build configuration list for PBXNativeTarget "CodeNameGeneratorTests" */;
+			buildPhases = (
+				4C132BE2172B649300CB4DCB /* Sources */,
+				4C132BE3172B649300CB4DCB /* Frameworks */,
+				4C132BE4172B649300CB4DCB /* Resources */,
+				4C132BE5172B649300CB4DCB /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C132BED172B649300CB4DCB /* PBXTargetDependency */,
+			);
+			name = CodeNameGeneratorTests;
+			productName = CodeNameGeneratorTests;
+			productReference = 4C132BE7172B649300CB4DCB /* CodeNameGeneratorTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4C132BB6172B649200CB4DCB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = ElephanTango;
+			};
+			buildConfigurationList = 4C132BB9172B649200CB4DCB /* Build configuration list for PBXProject "CodeNameGenerator" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4C132BB5172B649200CB4DCB;
+			productRefGroup = 4C132BBF172B649200CB4DCB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4C132BBD172B649200CB4DCB /* CodeNameGenerator */,
+				4C132BE6172B649300CB4DCB /* CodeNameGeneratorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4C132BBC172B649200CB4DCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C132BCC172B649200CB4DCB /* InfoPlist.strings in Resources */,
+				4C132BD4172B649200CB4DCB /* Default.png in Resources */,
+				4C132BD6172B649200CB4DCB /* Default@2x.png in Resources */,
+				4C132BD8172B649200CB4DCB /* Default-568h@2x.png in Resources */,
+				4C132BDB172B649200CB4DCB /* MainStoryboard_iPhone.storyboard in Resources */,
+				4C132BDE172B649200CB4DCB /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C132BE4172B649300CB4DCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C132BF3172B649300CB4DCB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4C132BE5172B649300CB4DCB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4C132BBA172B649200CB4DCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C132BCE172B649200CB4DCB /* main.m in Sources */,
+				4C132BD2172B649200CB4DCB /* AppDelegate.m in Sources */,
+				4C132BE1172B649200CB4DCB /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4C132BE2172B649300CB4DCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C132BF6172B649300CB4DCB /* CodeNameGeneratorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4C132BED172B649300CB4DCB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C132BBD172B649200CB4DCB /* CodeNameGenerator */;
+			targetProxy = 4C132BEC172B649300CB4DCB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4C132BCA172B649200CB4DCB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C132BCB172B649200CB4DCB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		4C132BD9172B649200CB4DCB /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C132BDA172B649200CB4DCB /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		4C132BDC172B649200CB4DCB /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C132BDD172B649200CB4DCB /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		4C132BF1172B649300CB4DCB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4C132BF2172B649300CB4DCB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4C132BF7172B649300CB4DCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4C132BF8172B649300CB4DCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4C132BFA172B649300CB4DCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CodeNameGenerator/CodeNameGenerator-Prefix.pch";
+				INFOPLIST_FILE = "CodeNameGenerator/CodeNameGenerator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		4C132BFB172B649300CB4DCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CodeNameGenerator/CodeNameGenerator-Prefix.pch";
+				INFOPLIST_FILE = "CodeNameGenerator/CodeNameGenerator-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		4C132BFD172B649300CB4DCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CodeNameGenerator.app/CodeNameGenerator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CodeNameGenerator/CodeNameGenerator-Prefix.pch";
+				INFOPLIST_FILE = "CodeNameGeneratorTests/CodeNameGeneratorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		4C132BFE172B649300CB4DCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/CodeNameGenerator.app/CodeNameGenerator";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "CodeNameGenerator/CodeNameGenerator-Prefix.pch";
+				INFOPLIST_FILE = "CodeNameGeneratorTests/CodeNameGeneratorTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4C132BB9172B649200CB4DCB /* Build configuration list for PBXProject "CodeNameGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C132BF7172B649300CB4DCB /* Debug */,
+				4C132BF8172B649300CB4DCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4C132BF9172B649300CB4DCB /* Build configuration list for PBXNativeTarget "CodeNameGenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C132BFA172B649300CB4DCB /* Debug */,
+				4C132BFB172B649300CB4DCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		4C132BFC172B649300CB4DCB /* Build configuration list for PBXNativeTarget "CodeNameGeneratorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C132BFD172B649300CB4DCB /* Debug */,
+				4C132BFE172B649300CB4DCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4C132BB6172B649200CB4DCB /* Project object */;
+}
