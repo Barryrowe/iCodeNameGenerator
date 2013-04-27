@@ -7,12 +7,24 @@
 //
 
 #import "ViewController.h"
+#import "CodeNameFactory.h"
 
 @interface ViewController ()
 
 @end
 
 @implementation ViewController
+
+
+-(IBAction) generateCodeName:(id)sender {
+    
+        NSString * codeName = [[CodeNameFactory sharedFactory] generateCodeNameUsingColors:[[self useColors] isOn]
+                                                                              UsingAnimals:[[self useAnimals] isOn]
+                                                                             UsingConcepts:[[self useConcepts] isOn]
+                                                                                UsingVerbs:[[self useVerbs] isOn]];
+    
+    [[self codeNameResult] setText:codeName];    
+}
 
 - (void)viewDidLoad
 {

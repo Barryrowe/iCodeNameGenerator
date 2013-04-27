@@ -1,23 +1,113 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JUK-GR-VUN"/>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c57-vQ-UXi"/>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gOg-Nm-6Uu"/>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wcp-Bh-iGe"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Use Colors" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8O-C1-j2m">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Use Animals" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hG-9t-fla">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Use Concepts" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Knm-W1-E2b">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Use Verbs" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bhz-6c-Hyg">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ch7-Cc-enM">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AfA-xN-JRO">
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Generate Code Name">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="generateCodeName:" destination="2" eventType="touchUpInside" id="ESC-Je-UuN"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="AfA-xN-JRO" firstAttribute="top" secondItem="3" secondAttribute="top" constant="199" id="5ml-UF-wa0"/>
+                            <constraint firstItem="6hG-9t-fla" firstAttribute="leading" secondItem="l8O-C1-j2m" secondAttribute="leading" type="default" id="7Fz-LA-3Xe"/>
+                            <constraint firstItem="c57-vQ-UXi" firstAttribute="top" secondItem="JUK-GR-VUN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="8R0-Og-bQh"/>
+                            <constraint firstAttribute="trailing" secondItem="AfA-xN-JRO" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="HfA-qH-Ze9"/>
+                            <constraint firstItem="Wcp-Bh-iGe" firstAttribute="top" secondItem="gOg-Nm-6Uu" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="HuA-4j-KMn"/>
+                            <constraint firstItem="Bhz-6c-Hyg" firstAttribute="leading" secondItem="Knm-W1-E2b" secondAttribute="leading" type="default" id="NS1-MP-x6Q"/>
+                            <constraint firstItem="AfA-xN-JRO" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="OHt-go-fHg"/>
+                            <constraint firstItem="6hG-9t-fla" firstAttribute="leading" secondItem="Knm-W1-E2b" secondAttribute="leading" type="default" id="Wkv-uE-9sO"/>
+                            <constraint firstItem="6hG-9t-fla" firstAttribute="centerY" secondItem="c57-vQ-UXi" secondAttribute="centerY" type="default" id="XGt-Ad-fdT"/>
+                            <constraint firstItem="gOg-Nm-6Uu" firstAttribute="top" secondItem="c57-vQ-UXi" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="XOe-Gf-bVl"/>
+                            <constraint firstItem="l8O-C1-j2m" firstAttribute="centerY" secondItem="JUK-GR-VUN" secondAttribute="centerY" type="default" id="Xr2-fF-LMl"/>
+                            <constraint firstItem="Knm-W1-E2b" firstAttribute="centerY" secondItem="gOg-Nm-6Uu" secondAttribute="centerY" type="default" id="XuT-eX-gYs"/>
+                            <constraint firstItem="c57-vQ-UXi" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="baz-JF-RFt"/>
+                            <constraint firstItem="JUK-GR-VUN" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="g0a-zB-a3p"/>
+                            <constraint firstItem="l8O-C1-j2m" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="gsZ-6j-HUd"/>
+                            <constraint firstItem="l8O-C1-j2m" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="110" id="hUO-bG-012"/>
+                            <constraint firstItem="AfA-xN-JRO" firstAttribute="centerX" secondItem="Ch7-Cc-enM" secondAttribute="centerX" type="default" id="lkx-5X-RcR"/>
+                            <constraint firstItem="gOg-Nm-6Uu" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="myD-U9-XGL"/>
+                            <constraint firstItem="Wcp-Bh-iGe" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="rEt-cX-UCN"/>
+                            <constraint firstItem="Ch7-Cc-enM" firstAttribute="top" secondItem="3" secondAttribute="top" constant="263" id="ytC-3T-GeU"/>
+                            <constraint firstItem="Bhz-6c-Hyg" firstAttribute="centerY" secondItem="Wcp-Bh-iGe" secondAttribute="centerY" type="default" id="z5S-dT-dwr"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="codeNameResult" destination="Ch7-Cc-enM" id="0dg-5N-3ph"/>
+                        <outlet property="useAnimals" destination="c57-vQ-UXi" id="LL4-v2-sSQ"/>
+                        <outlet property="useColors" destination="JUK-GR-VUN" id="PJP-nF-ghb"/>
+                        <outlet property="useConcepts" destination="gOg-Nm-6Uu" id="FuW-9h-2ls"/>
+                        <outlet property="useVerbs" destination="Wcp-Bh-iGe" id="aPo-EN-rnX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <classes>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+        <class className="ViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="generateCodeName:"/>
+                <relationship kind="outlet" name="codeNameResult" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="useAnimals" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="useColors" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="useConcepts" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="useVerbs" candidateClass="UISwitch"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
