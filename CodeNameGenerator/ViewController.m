@@ -21,7 +21,9 @@
         NSString * codeName = [[CodeNameFactory sharedFactory] generateCodeNameUsingColors:[[self useColors] isOn]
                                                                               UsingAnimals:[[self useAnimals] isOn]
                                                                              UsingConcepts:[[self useConcepts] isOn]
-                                                                                UsingVerbs:[[self useVerbs] isOn]];
+                                                                                UsingVerbs:[[self useVerbs] isOn]
+                               UsingColors2:[[self useColors2] isOn]
+ UsingAnimals2:[[self useAnimals2] isOn] UsingConcepts2:[[self useConcepts2] isOn] UsingVerbs2:[[self useVerbs2] isOn]];
     
     [[self codeNameResult] setText:codeName];    
 }

@@ -15,6 +15,12 @@
 @property (weak, nonatomic) IBOutlet UISwitch * useConcepts;
 @property (weak, nonatomic) IBOutlet UISwitch * useVerbs;
 
+@property (weak, nonatomic) IBOutlet UISwitch *useColors2;
+@property (weak, nonatomic) IBOutlet UISwitch *useAnimals2;
+@property (weak, nonatomic) IBOutlet UISwitch *useConcepts2;
+@property (weak, nonatomic) IBOutlet UISwitch *useVerbs2;
+
+
 @property (weak, nonatomic) IBOutlet UILabel * codeNameResult;
 
 

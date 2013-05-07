@@ -51,10 +51,37 @@
     return self;
 }
 
+
+- (NSString *) generateCodeNameUsingColors:(BOOL)useColors UsingAnimals:(BOOL)useAnimals UsingConcepts:(BOOL)useConcepts UsingVerbs:(BOOL)useVerbs UsingColors2:(BOOL)useColors2 UsingAnimals2:(BOOL)useAnimals2 UsingConcepts2:(BOOL)useConcepts2 UsingVerbs2:(BOOL)useVerbs2{
+    
+    NSString * firstWord = [self getRandomStringUsingColors:useColors UsingAnimals:useAnimals UsingConcepts:useConcepts UsingVerbs:useVerbs AndNotSameAs:@"--"];
+    
+    NSString * secondWord = [self getRandomStringUsingColors:useColors2 UsingAnimals:useAnimals2 UsingConcepts:useConcepts2 UsingVerbs:useVerbs2 AndNotSameAs:firstWord];
+    
+    NSString * codeName = [NSString stringWithFormat:@"%@ %@", firstWord, secondWord];
+    [[self codeNames] addObject:codeName];
+    
+    return codeName;
+    
+}
 - (NSString *) generateCodeNameUsingColors:(BOOL)useColors UsingAnimals:(BOOL)useAnimals UsingConcepts:(BOOL)useConcepts UsingVerbs:(BOOL)useVerbs{
     
+    return [self generateCodeNameUsingColors:useColors
+                                UsingAnimals:useAnimals
+                               UsingConcepts:useConcepts
+                                  UsingVerbs:useVerbs
+                                UsingColors2:useColors
+                               UsingAnimals2:useAnimals
+                              UsingConcepts2:useConcepts
+                                 UsingVerbs2:useVerbs];
+}
+
+- (NSString *) getRandomStringUsingColors:(BOOL)useColors UsingAnimals:(BOOL)useAnimals UsingConcepts:(BOOL)useConcepts UsingVerbs:(BOOL)useVerbs AndNotSameAs:(NSString *)dupe{
+  
     int maxIndex = 0;
+    
     NSMutableArray * searchArray = [[NSMutableArray alloc] init];
+    
     if(useColors){
         maxIndex += [[self colors] count] - 1;
         [searchArray addObjectsFromArray:[self colors]];
@@ -74,21 +101,20 @@
         maxIndex += [[self verbs] count] -1;
         [searchArray addObjectsFromArray:[self verbs]];
     }
+
+    
     
     if(maxIndex < 1){
-        return @"Dammit Melvin!";
+        return @"--";
     }
-    int targetA = rand() % maxIndex;
-    int targetB = rand() % maxIndex;
-    while(targetB == targetA){
-        targetB = rand() % maxIndex;
+    int targetIndex = rand() % maxIndex;
+    NSString * randString = [searchArray objectAtIndex:targetIndex];
+    while([randString isEqualToString:dupe]){
+        targetIndex = (targetIndex + 1) % maxIndex;
+        randString = [searchArray objectAtIndex:targetIndex];
     }
     
-    NSString * prefix = [searchArray objectAtIndex:targetA];
-    NSString * postfix = [searchArray objectAtIndex:targetB];
-    NSString * codeName = [NSString stringWithFormat:@"%@ %@", prefix, postfix];
-    [[self codeNames] addObject:codeName];
+    return randString;
     
-    return codeName;
 }
 @end

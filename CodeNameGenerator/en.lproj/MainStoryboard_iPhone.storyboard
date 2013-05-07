@@ -54,16 +54,25 @@
                                     <action selector="generateCodeName:" destination="2" eventType="touchUpInside" id="ESC-Je-UuN"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cu1-XN-b35"/>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MgC-TE-xDE"/>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q7f-kc-ssx"/>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wmy-gv-0GH"/>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Q7f-kc-ssx" firstAttribute="leading" secondItem="MgC-TE-xDE" secondAttribute="leading" type="default" id="3cs-gu-zC6"/>
                             <constraint firstItem="AfA-xN-JRO" firstAttribute="top" secondItem="3" secondAttribute="top" constant="199" id="5ml-UF-wa0"/>
                             <constraint firstItem="6hG-9t-fla" firstAttribute="leading" secondItem="l8O-C1-j2m" secondAttribute="leading" type="default" id="7Fz-LA-3Xe"/>
                             <constraint firstItem="c57-vQ-UXi" firstAttribute="top" secondItem="JUK-GR-VUN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="8R0-Og-bQh"/>
+                            <constraint firstItem="MgC-TE-xDE" firstAttribute="leading" secondItem="cu1-XN-b35" secondAttribute="leading" type="default" id="8hb-To-Rw1"/>
+                            <constraint firstAttribute="trailing" secondItem="cu1-XN-b35" secondAttribute="trailing" constant="11" id="BrQ-D7-C2U"/>
+                            <constraint firstItem="Q7f-kc-ssx" firstAttribute="top" secondItem="MgC-TE-xDE" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="FX5-pb-vQl"/>
                             <constraint firstAttribute="trailing" secondItem="AfA-xN-JRO" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="HfA-qH-Ze9"/>
                             <constraint firstItem="Wcp-Bh-iGe" firstAttribute="top" secondItem="gOg-Nm-6Uu" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="HuA-4j-KMn"/>
                             <constraint firstItem="Bhz-6c-Hyg" firstAttribute="leading" secondItem="Knm-W1-E2b" secondAttribute="leading" type="default" id="NS1-MP-x6Q"/>
                             <constraint firstItem="AfA-xN-JRO" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="OHt-go-fHg"/>
+                            <constraint firstItem="wmy-gv-0GH" firstAttribute="top" secondItem="Q7f-kc-ssx" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Tz7-VV-V4E"/>
                             <constraint firstItem="6hG-9t-fla" firstAttribute="leading" secondItem="Knm-W1-E2b" secondAttribute="leading" type="default" id="Wkv-uE-9sO"/>
                             <constraint firstItem="6hG-9t-fla" firstAttribute="centerY" secondItem="c57-vQ-UXi" secondAttribute="centerY" type="default" id="XGt-Ad-fdT"/>
                             <constraint firstItem="gOg-Nm-6Uu" firstAttribute="top" secondItem="c57-vQ-UXi" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="XOe-Gf-bVl"/>
@@ -71,43 +80,34 @@
                             <constraint firstItem="Knm-W1-E2b" firstAttribute="centerY" secondItem="gOg-Nm-6Uu" secondAttribute="centerY" type="default" id="XuT-eX-gYs"/>
                             <constraint firstItem="c57-vQ-UXi" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="baz-JF-RFt"/>
                             <constraint firstItem="JUK-GR-VUN" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="g0a-zB-a3p"/>
+                            <constraint firstItem="cu1-XN-b35" firstAttribute="top" secondItem="JUK-GR-VUN" secondAttribute="top" type="default" id="gqN-A4-w5E"/>
                             <constraint firstItem="l8O-C1-j2m" firstAttribute="top" secondItem="3" secondAttribute="top" constant="20" symbolic="YES" type="default" id="gsZ-6j-HUd"/>
                             <constraint firstItem="l8O-C1-j2m" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="110" id="hUO-bG-012"/>
                             <constraint firstItem="AfA-xN-JRO" firstAttribute="centerX" secondItem="Ch7-Cc-enM" secondAttribute="centerX" type="default" id="lkx-5X-RcR"/>
                             <constraint firstItem="gOg-Nm-6Uu" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="myD-U9-XGL"/>
                             <constraint firstItem="Wcp-Bh-iGe" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="rEt-cX-UCN"/>
+                            <constraint firstItem="MgC-TE-xDE" firstAttribute="top" secondItem="cu1-XN-b35" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="tvY-n4-HpP"/>
                             <constraint firstItem="Ch7-Cc-enM" firstAttribute="top" secondItem="3" secondAttribute="top" constant="263" id="ytC-3T-GeU"/>
                             <constraint firstItem="Bhz-6c-Hyg" firstAttribute="centerY" secondItem="Wcp-Bh-iGe" secondAttribute="centerY" type="default" id="z5S-dT-dwr"/>
+                            <constraint firstItem="wmy-gv-0GH" firstAttribute="leading" secondItem="Q7f-kc-ssx" secondAttribute="leading" type="default" id="z6X-5M-I1o"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="codeNameResult" destination="Ch7-Cc-enM" id="0dg-5N-3ph"/>
                         <outlet property="useAnimals" destination="c57-vQ-UXi" id="LL4-v2-sSQ"/>
+                        <outlet property="useAnimals2" destination="MgC-TE-xDE" id="HfJ-of-tSE"/>
                         <outlet property="useColors" destination="JUK-GR-VUN" id="PJP-nF-ghb"/>
+                        <outlet property="useColors2" destination="MgC-TE-xDE" id="Y8q-bt-rYH"/>
                         <outlet property="useConcepts" destination="gOg-Nm-6Uu" id="FuW-9h-2ls"/>
+                        <outlet property="useConcepts2" destination="Q7f-kc-ssx" id="JZu-lX-tux"/>
                         <outlet property="useVerbs" destination="Wcp-Bh-iGe" id="aPo-EN-rnX"/>
+                        <outlet property="useVerbs2" destination="wmy-gv-0GH" id="0DS-oz-4CH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
-    <classes>
-        <class className="NSLayoutConstraint" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
-        </class>
-        <class className="ViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="generateCodeName:"/>
-                <relationship kind="outlet" name="codeNameResult" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="useAnimals" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="useColors" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="useConcepts" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="useVerbs" candidateClass="UISwitch"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
