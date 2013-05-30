@@ -34,6 +34,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    [[self colorsLabel] setTextAlignment:NSTextAlignmentCenter];
+        [[self animalsLabel] setTextAlignment:NSTextAlignmentCenter];
+        [[self conceptsLabel] setTextAlignment:NSTextAlignmentCenter];
+        [[self verbsLabel] setTextAlignment:NSTextAlignmentCenter];
+    [[self codeNameResult] setTextAlignment:NSTextAlignmentCenter];
+    
 }
 
 - (void)didReceiveMemoryWarning

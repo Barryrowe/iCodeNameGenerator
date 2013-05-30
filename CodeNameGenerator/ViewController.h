@@ -20,6 +20,11 @@
 @property (weak, nonatomic) IBOutlet UISwitch *useConcepts2;
 @property (weak, nonatomic) IBOutlet UISwitch *useVerbs2;
 
+@property (weak, nonatomic) IBOutlet UILabel *colorsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *animalsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *conceptsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *verbsLabel;
+
 
 @property (weak, nonatomic) IBOutlet UILabel * codeNameResult;
 
