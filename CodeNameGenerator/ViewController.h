@@ -27,6 +27,7 @@
 
 
 @property (weak, nonatomic) IBOutlet UILabel * codeNameResult;
+@property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 
 
 - (IBAction) generateCodeName:(id)sender;

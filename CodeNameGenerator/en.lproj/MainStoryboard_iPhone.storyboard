@@ -63,7 +63,10 @@
                             <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wmy-gv-0GH"/>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQZ-Ed-pT8">
                                 <items>
-                                    <navigationItem title="Generate Code Name" id="lhI-ne-k3z"/>
+                                    <navigationItem title="Get Code Name" id="lhI-ne-k3z">
+                                        <barButtonItem key="leftBarButtonItem" title="List" id="qpH-He-tz3"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="hab-ft-2Ds"/>
+                                    </navigationItem>
                                 </items>
                             </navigationBar>
                         </subviews>
@@ -113,6 +116,7 @@
                         <outlet property="codeNameResult" destination="Ch7-Cc-enM" id="0dg-5N-3ph"/>
                         <outlet property="colorsLabel" destination="l8O-C1-j2m" id="3zx-5d-rWy"/>
                         <outlet property="conceptsLabel" destination="Knm-W1-E2b" id="fPe-TU-W59"/>
+                        <outlet property="navigationBar" destination="cQZ-Ed-pT8" id="ziH-v8-oL5"/>
                         <outlet property="useAnimals" destination="c57-vQ-UXi" id="LL4-v2-sSQ"/>
                         <outlet property="useAnimals2" destination="MgC-TE-xDE" id="HfJ-of-tSE"/>
                         <outlet property="useColors" destination="JUK-GR-VUN" id="PJP-nF-ghb"/>
@@ -141,6 +145,7 @@
                 <relationship kind="outlet" name="codeNameResult" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="colorsLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="conceptsLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="navigationBar" candidateClass="UINavigationBar"/>
                 <relationship kind="outlet" name="useAnimals" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="useAnimals2" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="useColors" candidateClass="UISwitch"/>
