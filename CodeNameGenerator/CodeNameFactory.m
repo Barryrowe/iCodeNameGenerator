@@ -38,6 +38,7 @@
 -(id)init{
     self = [super init];
     if(self){
+        
         _colors     = [[NSMutableArray alloc] initWithObjects:@"Red", @"Blue", @"Purple", @"Green", @"Oragne", @"Yellow", @"Aquamarine", @"Fuschia", nil];
         
         _animals    = [[NSMutableArray alloc] initWithObjects:@"Elephant",
@@ -54,9 +55,17 @@
 
 - (NSString *) generateCodeNameUsingColors:(BOOL)useColors UsingAnimals:(BOOL)useAnimals UsingConcepts:(BOOL)useConcepts UsingVerbs:(BOOL)useVerbs UsingColors2:(BOOL)useColors2 UsingAnimals2:(BOOL)useAnimals2 UsingConcepts2:(BOOL)useConcepts2 UsingVerbs2:(BOOL)useVerbs2{
     
-    NSString * firstWord = [self getRandomStringUsingColors:useColors UsingAnimals:useAnimals UsingConcepts:useConcepts UsingVerbs:useVerbs AndNotSameAs:@"--"];
+    NSString * firstWord = [self getRandomStringUsingColors:useColors
+                                               UsingAnimals:useAnimals
+                                              UsingConcepts:useConcepts
+                                                 UsingVerbs:useVerbs
+                                               AndNotSameAs:@"--"];
     
-    NSString * secondWord = [self getRandomStringUsingColors:useColors2 UsingAnimals:useAnimals2 UsingConcepts:useConcepts2 UsingVerbs:useVerbs2 AndNotSameAs:firstWord];
+    NSString * secondWord = [self getRandomStringUsingColors:useColors2
+                                                UsingAnimals:useAnimals2
+                                               UsingConcepts:useConcepts2
+                                                  UsingVerbs:useVerbs2
+                                                AndNotSameAs:firstWord];
     
     NSString * codeName = [NSString stringWithFormat:@"%@ %@", firstWord, secondWord];
     [[self codeNames] addObject:codeName];
@@ -64,52 +73,45 @@
     return codeName;
     
 }
-- (NSString *) generateCodeNameUsingColors:(BOOL)useColors UsingAnimals:(BOOL)useAnimals UsingConcepts:(BOOL)useConcepts UsingVerbs:(BOOL)useVerbs{
-    
-    return [self generateCodeNameUsingColors:useColors
-                                UsingAnimals:useAnimals
-                               UsingConcepts:useConcepts
-                                  UsingVerbs:useVerbs
-                                UsingColors2:useColors
-                               UsingAnimals2:useAnimals
-                              UsingConcepts2:useConcepts
-                                 UsingVerbs2:useVerbs];
-}
 
-- (NSString *) getRandomStringUsingColors:(BOOL)useColors UsingAnimals:(BOOL)useAnimals UsingConcepts:(BOOL)useConcepts UsingVerbs:(BOOL)useVerbs AndNotSameAs:(NSString *)dupe{
+- (NSString *) getRandomStringUsingColors:(BOOL)useColors
+                             UsingAnimals:(BOOL)useAnimals
+                            UsingConcepts:(BOOL)useConcepts
+                               UsingVerbs:(BOOL)useVerbs
+                             AndNotSameAs:(NSString *)dupe{
   
+    NSLog(@"UseColors: %i\nUseAnimals: %i\nUseConcepts: %i\nUseVerbs: %i\nDupe: %@", useColors, useAnimals, useConcepts, useVerbs, dupe);
     int maxIndex = 0;
     
     NSMutableArray * searchArray = [[NSMutableArray alloc] init];
     
     if(useColors){
-        maxIndex += [[self colors] count] - 1;
         [searchArray addObjectsFromArray:[self colors]];
     }
     
     if(useAnimals){
-        maxIndex += [[self animals] count] -1;
         [searchArray addObjectsFromArray:[self animals]];
     }
     
     if(useConcepts){
-        maxIndex += [[self concepts] count] -1;
         [searchArray addObjectsFromArray:[self concepts]];
     }
     
     if(useVerbs){
-        maxIndex += [[self verbs] count] -1;
         [searchArray addObjectsFromArray:[self verbs]];
     }
-
     
+    maxIndex = [searchArray count] -1;
+    NSLog(@"Max Index: %d", maxIndex);
     
     if(maxIndex < 1){
         return @"--";
     }
     int targetIndex = rand() % maxIndex;
     NSString * randString = [searchArray objectAtIndex:targetIndex];
-    while([randString isEqualToString:dupe]){
+    //No need to do a while loop, if we're the same, the Next value can't be
+    //  the same. So we just grab the next value. It's cleaner logic
+    if([randString isEqualToString:dupe]){
         targetIndex = (targetIndex + 1) % maxIndex;
         randString = [searchArray objectAtIndex:targetIndex];
     }
