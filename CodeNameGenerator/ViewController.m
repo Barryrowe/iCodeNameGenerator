@@ -18,7 +18,7 @@
 
 -(IBAction) generateCodeName:(id)sender {
     
-        NSString * codeName = [[CodeNameFactory sharedFactory] generateCodeNameUsingColors:[[self useColors] isOn]
+        CodeName * codeName = [[CodeNameFactory sharedFactory] generateCodeNameUsingColors:[[self useColors] isOn]
                                                                               UsingAnimals:[[self useAnimals] isOn]
                                                                              UsingConcepts:[[self useConcepts] isOn]
                                                                                 UsingVerbs:[[self useVerbs] isOn]
@@ -27,7 +27,7 @@
                                                                             UsingConcepts2:[[self useConcepts2] isOn]
                                                                                UsingVerbs2:[[self useVerbs2] isOn]];
     
-    [[self codeNameResult] setText:codeName];    
+    [[self codeNameResult] setText:[codeName name]];
 }
 
 - (void)viewDidLoad

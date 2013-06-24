@@ -24,6 +24,10 @@
 		4C132BF3172B649300CB4DCB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4C132BF1172B649300CB4DCB /* InfoPlist.strings */; };
 		4C132BF6172B649300CB4DCB /* CodeNameGeneratorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C132BF5172B649300CB4DCB /* CodeNameGeneratorTests.m */; };
 		4C132C01172B658C00CB4DCB /* CodeNameFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C132C00172B658C00CB4DCB /* CodeNameFactory.m */; };
+		4C42656B1764F30B00614978 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C42656A1764F30B00614978 /* CoreData.framework */; };
+		4C42656E1764F35000614978 /* CodeNameGenerator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C42656C1764F35000614978 /* CodeNameGenerator.xcdatamodeld */; };
+		4C4265A31766707B00614978 /* WordStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4265A21766707B00614978 /* WordStore.m */; };
+		4C4265A61766727100614978 /* CodeName.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4265A51766727100614978 /* CodeName.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +65,12 @@
 		4C132BF5172B649300CB4DCB /* CodeNameGeneratorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeNameGeneratorTests.m; sourceTree = "<group>"; };
 		4C132BFF172B658C00CB4DCB /* CodeNameFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeNameFactory.h; sourceTree = "<group>"; };
 		4C132C00172B658C00CB4DCB /* CodeNameFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeNameFactory.m; sourceTree = "<group>"; };
+		4C42656A1764F30B00614978 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		4C42656D1764F35000614978 /* CodeNameGenerator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CodeNameGenerator.xcdatamodel; sourceTree = "<group>"; };
+		4C4265A11766707B00614978 /* WordStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordStore.h; sourceTree = "<group>"; };
+		4C4265A21766707B00614978 /* WordStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordStore.m; sourceTree = "<group>"; };
+		4C4265A41766727100614978 /* CodeName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeName.h; sourceTree = "<group>"; };
+		4C4265A51766727100614978 /* CodeName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeName.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C42656B1764F30B00614978 /* CoreData.framework in Frameworks */,
 				4C132BC2172B649200CB4DCB /* UIKit.framework in Frameworks */,
 				4C132BC4172B649200CB4DCB /* Foundation.framework in Frameworks */,
 				4C132BC6172B649200CB4DCB /* CoreGraphics.framework in Frameworks */,
@@ -90,6 +101,7 @@
 		4C132BB5172B649200CB4DCB = {
 			isa = PBXGroup;
 			children = (
+				4C42656A1764F30B00614978 /* CoreData.framework */,
 				4C132BC7172B649200CB4DCB /* CodeNameGenerator */,
 				4C132BEE172B649300CB4DCB /* CodeNameGeneratorTests */,
 				4C132BC0172B649200CB4DCB /* Frameworks */,
@@ -120,6 +132,7 @@
 		4C132BC7172B649200CB4DCB /* CodeNameGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				4C42656F1764F35C00614978 /* Data */,
 				4C132BD0172B649200CB4DCB /* AppDelegate.h */,
 				4C132BD1172B649200CB4DCB /* AppDelegate.m */,
 				4C132BD9172B649200CB4DCB /* MainStoryboard_iPhone.storyboard */,
@@ -128,6 +141,8 @@
 				4C132BC8172B649200CB4DCB /* Supporting Files */,
 				4C132BFF172B658C00CB4DCB /* CodeNameFactory.h */,
 				4C132C00172B658C00CB4DCB /* CodeNameFactory.m */,
+				4C4265A11766707B00614978 /* WordStore.h */,
+				4C4265A21766707B00614978 /* WordStore.m */,
 			);
 			path = CodeNameGenerator;
 			sourceTree = "<group>";
@@ -163,6 +178,16 @@
 				4C132BF1172B649300CB4DCB /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4C42656F1764F35C00614978 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4C42656C1764F35000614978 /* CodeNameGenerator.xcdatamodeld */,
+				4C4265A41766727100614978 /* CodeName.h */,
+				4C4265A51766727100614978 /* CodeName.m */,
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -279,6 +304,9 @@
 				4C132BD2172B649200CB4DCB /* AppDelegate.m in Sources */,
 				4C132BE1172B649200CB4DCB /* ViewController.m in Sources */,
 				4C132C01172B658C00CB4DCB /* CodeNameFactory.m in Sources */,
+				4C42656E1764F35000614978 /* CodeNameGenerator.xcdatamodeld in Sources */,
+				4C4265A31766707B00614978 /* WordStore.m in Sources */,
+				4C4265A61766727100614978 /* CodeName.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +489,7 @@
 				4C132BFB172B649300CB4DCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4C132BFC172B649300CB4DCB /* Build configuration list for PBXNativeTarget "CodeNameGeneratorTests" */ = {
 			isa = XCConfigurationList;
@@ -469,8 +498,22 @@
 				4C132BFE172B649300CB4DCB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4C42656C1764F35000614978 /* CodeNameGenerator.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4C42656D1764F35000614978 /* CodeNameGenerator.xcdatamodel */,
+			);
+			currentVersion = 4C42656D1764F35000614978 /* CodeNameGenerator.xcdatamodel */;
+			path = CodeNameGenerator.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4C132BB6172B649200CB4DCB /* Project object */;
 }

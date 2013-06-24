@@ -7,6 +7,7 @@
 //
 
 #import "CodeNameFactory.h"
+#import <CoreData/CoreData.h>
 
 @interface CodeNameFactory(){
     NSMutableArray *_colors;
@@ -15,6 +16,9 @@
     NSMutableArray *_verbs;
     
     NSMutableArray *_codeNames;
+    
+    NSManagedObjectContext *_context;
+    NSManagedObjectModel *_model;
 }
 @end
 
@@ -52,8 +56,14 @@
     return self;
 }
 
+-(NSString *)dataArchivePath{
+    NSArray *documentDirectories = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentDirectory = [documentDirectories objectAtIndex:0];
+    return [documentDirectory stringByAppendingPathComponent:@"codename.data"];
+}
 
-- (NSString *) generateCodeNameUsingColors:(BOOL)useColors UsingAnimals:(BOOL)useAnimals UsingConcepts:(BOOL)useConcepts UsingVerbs:(BOOL)useVerbs UsingColors2:(BOOL)useColors2 UsingAnimals2:(BOOL)useAnimals2 UsingConcepts2:(BOOL)useConcepts2 UsingVerbs2:(BOOL)useVerbs2{
+
+- (CodeName *) generateCodeNameUsingColors:(BOOL)useColors UsingAnimals:(BOOL)useAnimals UsingConcepts:(BOOL)useConcepts UsingVerbs:(BOOL)useVerbs UsingColors2:(BOOL)useColors2 UsingAnimals2:(BOOL)useAnimals2 UsingConcepts2:(BOOL)useConcepts2 UsingVerbs2:(BOOL)useVerbs2{
     
     NSString * firstWord = [self getRandomStringUsingColors:useColors
                                                UsingAnimals:useAnimals
@@ -67,11 +77,12 @@
                                                   UsingVerbs:useVerbs2
                                                 AndNotSameAs:firstWord];
     
-    NSString * codeName = [NSString stringWithFormat:@"%@ %@", firstWord, secondWord];
+    CodeName * codeName = [[CodeName alloc] initWithFirstWord:firstWord
+                                                AndSecondWord:secondWord];
+    
     [[self codeNames] addObject:codeName];
     
     return codeName;
-    
 }
 
 - (NSString *) getRandomStringUsingColors:(BOOL)useColors

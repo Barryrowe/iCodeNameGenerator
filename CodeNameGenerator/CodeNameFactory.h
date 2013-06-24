@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CodeName.h"
 
 @interface CodeNameFactory : NSObject
 {
@@ -22,6 +23,9 @@
 
 @property (nonatomic, strong, readonly) NSMutableArray * codeNames;
 
-- (NSString *) generateCodeNameUsingColors:(BOOL)useColors UsingAnimals:(BOOL)useAnimals UsingConcepts:(BOOL)useConcepts UsingVerbs:(BOOL)useVerbs UsingColors2:(BOOL)useColors2 UsingAnimals2:(BOOL)useAnimals2 UsingConcepts2:(BOOL)useConcepts2 UsingVerbs2:(BOOL)useVerbs2;
+- (CodeName *) generateCodeNameUsingColors:(BOOL)useColors UsingAnimals:(BOOL)useAnimals UsingConcepts:(BOOL)useConcepts UsingVerbs:(BOOL)useVerbs UsingColors2:(BOOL)useColors2 UsingAnimals2:(BOOL)useAnimals2 UsingConcepts2:(BOOL)useConcepts2 UsingVerbs2:(BOOL)useVerbs2;
+
+//Doesn't Belong Here
+- (NSString *)dataArchivePath;
 
 @end
