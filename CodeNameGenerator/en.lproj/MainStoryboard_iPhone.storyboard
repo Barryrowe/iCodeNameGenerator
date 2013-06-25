@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
@@ -65,7 +65,11 @@
                                 <items>
                                     <navigationItem title="Get Code Name" id="lhI-ne-k3z">
                                         <barButtonItem key="leftBarButtonItem" title="List" id="qpH-He-tz3"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Save" id="hab-ft-2Ds"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Save" id="hab-ft-2Ds">
+                                            <connections>
+                                                <action selector="saveCodeName:" destination="2" id="jTp-Kl-I4I"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -117,6 +121,7 @@
                         <outlet property="colorsLabel" destination="l8O-C1-j2m" id="3zx-5d-rWy"/>
                         <outlet property="conceptsLabel" destination="Knm-W1-E2b" id="fPe-TU-W59"/>
                         <outlet property="navigationBar" destination="cQZ-Ed-pT8" id="ziH-v8-oL5"/>
+                        <outlet property="saveButton" destination="hab-ft-2Ds" id="XUw-nm-tMY"/>
                         <outlet property="useAnimals" destination="c57-vQ-UXi" id="LL4-v2-sSQ"/>
                         <outlet property="useAnimals2" destination="MgC-TE-xDE" id="HfJ-of-tSE"/>
                         <outlet property="useColors" destination="JUK-GR-VUN" id="PJP-nF-ghb"/>
@@ -141,11 +146,13 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ViewController.h"/>
             <relationships>
                 <relationship kind="action" name="generateCodeName:"/>
+                <relationship kind="action" name="saveCodeName:"/>
                 <relationship kind="outlet" name="animalsLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="codeNameResult" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="colorsLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="conceptsLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="navigationBar" candidateClass="UINavigationBar"/>
+                <relationship kind="outlet" name="saveButton" candidateClass="UIBarButtonItem"/>
                 <relationship kind="outlet" name="useAnimals" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="useAnimals2" candidateClass="UISwitch"/>
                 <relationship kind="outlet" name="useColors" candidateClass="UISwitch"/>

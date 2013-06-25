@@ -28,8 +28,8 @@
 
 @property (weak, nonatomic) IBOutlet UILabel * codeNameResult;
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
-
+@property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
 - (IBAction) generateCodeName:(id)sender;
-
+- (IBAction) saveCodeName:(id)sender;
 @end

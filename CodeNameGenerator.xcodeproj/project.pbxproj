@@ -28,6 +28,7 @@
 		4C42656E1764F35000614978 /* CodeNameGenerator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C42656C1764F35000614978 /* CodeNameGenerator.xcdatamodeld */; };
 		4C4265A31766707B00614978 /* WordStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4265A21766707B00614978 /* WordStore.m */; };
 		4C4265A61766727100614978 /* CodeName.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4265A51766727100614978 /* CodeName.m */; };
+		4CCEEBF217792582007FD7A4 /* CodeNameInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCEEBF117792582007FD7A4 /* CodeNameInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,8 @@
 		4C4265A21766707B00614978 /* WordStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordStore.m; sourceTree = "<group>"; };
 		4C4265A41766727100614978 /* CodeName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeName.h; sourceTree = "<group>"; };
 		4C4265A51766727100614978 /* CodeName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeName.m; sourceTree = "<group>"; };
+		4CCEEBF017792582007FD7A4 /* CodeNameInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeNameInfo.h; sourceTree = "<group>"; };
+		4CCEEBF117792582007FD7A4 /* CodeNameInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeNameInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,8 @@
 				4C132C00172B658C00CB4DCB /* CodeNameFactory.m */,
 				4C4265A11766707B00614978 /* WordStore.h */,
 				4C4265A21766707B00614978 /* WordStore.m */,
+				4CCEEBF017792582007FD7A4 /* CodeNameInfo.h */,
+				4CCEEBF117792582007FD7A4 /* CodeNameInfo.m */,
 			);
 			path = CodeNameGenerator;
 			sourceTree = "<group>";
@@ -307,6 +312,7 @@
 				4C42656E1764F35000614978 /* CodeNameGenerator.xcdatamodeld in Sources */,
 				4C4265A31766707B00614978 /* WordStore.m in Sources */,
 				4C4265A61766727100614978 /* CodeName.m in Sources */,
+				4CCEEBF217792582007FD7A4 /* CodeNameInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

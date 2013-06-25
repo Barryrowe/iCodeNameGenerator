@@ -9,8 +9,9 @@
 #import "ViewController.h"
 #import "CodeNameFactory.h"
 
-@interface ViewController ()
-
+@interface ViewController (){
+    CodeNameInfo *lastCodeName;
+}
 @end
 
 @implementation ViewController
@@ -18,7 +19,7 @@
 
 -(IBAction) generateCodeName:(id)sender {
     
-        CodeName * codeName = [[CodeNameFactory sharedFactory] generateCodeNameUsingColors:[[self useColors] isOn]
+        lastCodeName = [[CodeNameFactory sharedFactory] generateCodeNameUsingColors:[[self useColors] isOn]
                                                                               UsingAnimals:[[self useAnimals] isOn]
                                                                              UsingConcepts:[[self useConcepts] isOn]
                                                                                 UsingVerbs:[[self useVerbs] isOn]
@@ -27,7 +28,13 @@
                                                                             UsingConcepts2:[[self useConcepts2] isOn]
                                                                                UsingVerbs2:[[self useVerbs2] isOn]];
     
-    [[self codeNameResult] setText:[codeName name]];
+    [[self codeNameResult] setText:[lastCodeName displayName]];
+    [[self saveButton] setEnabled:YES];
+}
+
+-(IBAction) saveCodeName:(id)sender{
+    [[CodeNameFactory sharedFactory] addCodeName:lastCodeName];
+    [sender setEnabled:NO];
 }
 
 - (void)viewDidLoad

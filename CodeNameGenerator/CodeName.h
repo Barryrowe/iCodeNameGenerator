@@ -13,11 +13,9 @@
 @interface CodeName : NSManagedObject
 
 @property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSString * codeNameFirstWord;
-@property (nonatomic, retain) NSString * codeNameSecondWord;
-@property (nonatomic, retain) NSString * codeNameSummary;
-@property (nonatomic, retain) NSString * codeNameRepoUrl;
+@property (nonatomic, retain) NSString * firstWord;
+@property (nonatomic, retain) NSString * secondWord;
+@property (nonatomic, retain) NSString * summary;
+@property (nonatomic, retain) NSString * repoUrl;
 
--(id)initWithFirstWord:(NSString *)firstWord AndSecondWord:(NSString *)secondWord;
--(id)initWithFirstWord:(NSString *)firstWord SecondWord:(NSString *)secondWord Summary:(NSString *)summary AndRepoUrl:(NSString *)repoUrl;
 @end
