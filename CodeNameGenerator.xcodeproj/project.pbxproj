@@ -28,6 +28,7 @@
 		4C42656E1764F35000614978 /* CodeNameGenerator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4C42656C1764F35000614978 /* CodeNameGenerator.xcdatamodeld */; };
 		4C4265A31766707B00614978 /* WordStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4265A21766707B00614978 /* WordStore.m */; };
 		4C4265A61766727100614978 /* CodeName.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C4265A51766727100614978 /* CodeName.m */; };
+		4C9142241783A241009B72F1 /* CodeNameListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C9142231783A241009B72F1 /* CodeNameListViewController.m */; };
 		4CCEEBF217792582007FD7A4 /* CodeNameInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CCEEBF117792582007FD7A4 /* CodeNameInfo.m */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +73,8 @@
 		4C4265A21766707B00614978 /* WordStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordStore.m; sourceTree = "<group>"; };
 		4C4265A41766727100614978 /* CodeName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeName.h; sourceTree = "<group>"; };
 		4C4265A51766727100614978 /* CodeName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeName.m; sourceTree = "<group>"; };
+		4C9142221783A241009B72F1 /* CodeNameListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeNameListViewController.h; sourceTree = "<group>"; };
+		4C9142231783A241009B72F1 /* CodeNameListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeNameListViewController.m; sourceTree = "<group>"; };
 		4CCEEBF017792582007FD7A4 /* CodeNameInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeNameInfo.h; sourceTree = "<group>"; };
 		4CCEEBF117792582007FD7A4 /* CodeNameInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeNameInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -135,12 +138,11 @@
 		4C132BC7172B649200CB4DCB /* CodeNameGenerator */ = {
 			isa = PBXGroup;
 			children = (
+				4C9142211783A21D009B72F1 /* Controllers */,
 				4C42656F1764F35C00614978 /* Data */,
 				4C132BD0172B649200CB4DCB /* AppDelegate.h */,
 				4C132BD1172B649200CB4DCB /* AppDelegate.m */,
 				4C132BD9172B649200CB4DCB /* MainStoryboard_iPhone.storyboard */,
-				4C132BDF172B649200CB4DCB /* ViewController.h */,
-				4C132BE0172B649200CB4DCB /* ViewController.m */,
 				4C132BC8172B649200CB4DCB /* Supporting Files */,
 				4C132BFF172B658C00CB4DCB /* CodeNameFactory.h */,
 				4C132C00172B658C00CB4DCB /* CodeNameFactory.m */,
@@ -193,6 +195,17 @@
 				4C4265A51766727100614978 /* CodeName.m */,
 			);
 			name = Data;
+			sourceTree = "<group>";
+		};
+		4C9142211783A21D009B72F1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4C132BDF172B649200CB4DCB /* ViewController.h */,
+				4C132BE0172B649200CB4DCB /* ViewController.m */,
+				4C9142221783A241009B72F1 /* CodeNameListViewController.h */,
+				4C9142231783A241009B72F1 /* CodeNameListViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,6 +326,7 @@
 				4C4265A31766707B00614978 /* WordStore.m in Sources */,
 				4C4265A61766727100614978 /* CodeName.m in Sources */,
 				4CCEEBF217792582007FD7A4 /* CodeNameInfo.m in Sources */,
+				4C9142241783A241009B72F1 /* CodeNameListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="uje-OK-EoN">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller - Generate Code Name-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JUK-GR-VUN"/>
@@ -61,18 +61,6 @@
                             <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MgC-TE-xDE"/>
                             <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q7f-kc-ssx"/>
                             <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wmy-gv-0GH"/>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cQZ-Ed-pT8">
-                                <items>
-                                    <navigationItem title="Get Code Name" id="lhI-ne-k3z">
-                                        <barButtonItem key="leftBarButtonItem" title="List" id="qpH-He-tz3"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Save" id="hab-ft-2Ds">
-                                            <connections>
-                                                <action selector="saveCodeName:" destination="2" id="jTp-Kl-I4I"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -84,8 +72,6 @@
                             <constraint firstItem="l8O-C1-j2m" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="6KK-iS-bhq"/>
                             <constraint firstItem="c57-vQ-UXi" firstAttribute="top" secondItem="JUK-GR-VUN" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="8R0-Og-bQh"/>
                             <constraint firstItem="MgC-TE-xDE" firstAttribute="leading" secondItem="cu1-XN-b35" secondAttribute="leading" type="default" id="8hb-To-Rw1"/>
-                            <constraint firstItem="cQZ-Ed-pT8" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="8jX-8F-OII"/>
-                            <constraint firstItem="cQZ-Ed-pT8" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="8qS-eg-yNb"/>
                             <constraint firstItem="Bhz-6c-Hyg" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="AQP-OR-8Gk"/>
                             <constraint firstItem="Knm-W1-E2b" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="EAy-1K-cZX"/>
                             <constraint firstItem="Q7f-kc-ssx" firstAttribute="top" secondItem="MgC-TE-xDE" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="FX5-pb-vQl"/>
@@ -97,7 +83,6 @@
                             <constraint firstAttribute="trailing" secondItem="cu1-XN-b35" secondAttribute="trailing" constant="11" id="OS1-oU-uHz"/>
                             <constraint firstItem="wmy-gv-0GH" firstAttribute="top" secondItem="Q7f-kc-ssx" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Tz7-VV-V4E"/>
                             <constraint firstItem="Ch7-Cc-enM" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="X0r-AN-39i"/>
-                            <constraint firstItem="cQZ-Ed-pT8" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="XFG-SB-53T"/>
                             <constraint firstItem="gOg-Nm-6Uu" firstAttribute="top" secondItem="c57-vQ-UXi" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="XOe-Gf-bVl"/>
                             <constraint firstItem="AfA-xN-JRO" firstAttribute="top" secondItem="wmy-gv-0GH" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="anE-V9-7jl"/>
                             <constraint firstItem="c57-vQ-UXi" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="baz-JF-RFt"/>
@@ -115,12 +100,18 @@
                             <constraint firstItem="wmy-gv-0GH" firstAttribute="leading" secondItem="Q7f-kc-ssx" secondAttribute="leading" type="default" id="z6X-5M-I1o"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Generate Code Name" id="6e6-O4-zvb">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="hab-ft-2Ds">
+                            <connections>
+                                <action selector="saveCodeName:" destination="2" id="jTp-Kl-I4I"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="animalsLabel" destination="6hG-9t-fla" id="KTF-Na-J2z"/>
                         <outlet property="codeNameResult" destination="Ch7-Cc-enM" id="0dg-5N-3ph"/>
                         <outlet property="colorsLabel" destination="l8O-C1-j2m" id="3zx-5d-rWy"/>
                         <outlet property="conceptsLabel" destination="Knm-W1-E2b" id="fPe-TU-W59"/>
-                        <outlet property="navigationBar" destination="cQZ-Ed-pT8" id="ziH-v8-oL5"/>
                         <outlet property="saveButton" destination="hab-ft-2Ds" id="XUw-nm-tMY"/>
                         <outlet property="useAnimals" destination="c57-vQ-UXi" id="LL4-v2-sSQ"/>
                         <outlet property="useAnimals2" destination="MgC-TE-xDE" id="HfJ-of-tSE"/>
@@ -135,10 +126,64 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-293" y="-223"/>
+            <point key="canvasLocation" x="219" y="-166"/>
+        </scene>
+        <!--Code Name List View Controller - My Code Names-->
+        <scene sceneID="y2D-jw-rv3">
+            <objects>
+                <tableViewController id="KCy-q1-0af" customClass="CodeNameListViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="iBg-4X-LG3">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="CodeNameCell" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CodeNameCell" id="0gf-p8-hRw">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="My Code Names" id="TqN-lZ-Rn9">
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="xYo-WP-VTy">
+                            <connections>
+                                <segue destination="2" kind="push" id="sHB-tD-ve3"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Mw-Ro-Ep9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-393" y="-166"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="NO7-aO-Ip6">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="uje-OK-EoN" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2j1-DL-8Ca">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="mR8-xe-tNi">
+                        <rect key="frame" x="0.0" y="416" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="KCy-q1-0af" kind="relationship" relationship="rootViewController" id="dZy-eC-Bv9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0oH-PU-4Hz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-809" y="-194"/>
         </scene>
     </scenes>
     <classes>
+        <class className="CodeNameListViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CodeNameListViewController.h"/>
+        </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>

@@ -131,6 +131,7 @@
     [newCodeName setSummary:[codeName summary]];
     
     [self saveChanges];
+    [codeNames addObject:newCodeName];
     return newCodeName;
 }
 
