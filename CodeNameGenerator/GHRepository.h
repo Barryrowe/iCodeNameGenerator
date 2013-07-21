@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 
 /*
-  Example JSON from Github API V3 for Repository Search
+  Example JSON from Github API V3 for Repository Search. This result was
+    returned from the following urL:
+  https://api.github.com/legacy/repos/search/iCodeNameGenerator
  
  {
     "repositories": [

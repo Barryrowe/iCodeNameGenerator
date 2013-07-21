@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UISwitch * useColors;
 @property (weak, nonatomic) IBOutlet UISwitch * useAnimals;
@@ -27,7 +27,8 @@
 
 
 @property (weak, nonatomic) IBOutlet UILabel * codeNameResult;
-@property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
+@property (weak, nonatomic) IBOutlet UITextView *codeNameDesc;
+
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *saveButton;
 
 - (IBAction) generateCodeName:(id)sender;

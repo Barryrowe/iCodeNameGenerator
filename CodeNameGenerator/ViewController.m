@@ -37,6 +37,7 @@
 }
 
 -(IBAction) saveCodeName:(id)sender{
+    lastCodeName.summary = self.codeNameDesc.text;
     [[CodeNameFactory sharedFactory] addCodeName:lastCodeName];
     [sender setEnabled:NO];
 }
@@ -78,8 +79,10 @@
         ghRepos = [GHRepository reposFromJson:responseData];
         if([ghRepos count] > 0){
             NSLog(@"Repository Exists with Name: %@.", searchTerm);
+            //[self.codeNameResult setText:[NSString stringWithFormat:@"%@ (%@)", [self.codeNameResult text], @"Unavailable"]];
         }else{
             NSLog(@"Repository name %@ is available!", searchTerm);
+            //[self.codeNameResult setText:[NSString stringWithFormat:@"%@ (%@)", [self.codeNameResult text], @"Available"]];
         }
         
     };
@@ -89,4 +92,12 @@
                            completionHandler:handler];
 }
 
+
+//
+//UITextFieldDelegate Protocol Implementation
+///
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    [self.codeNameDesc resignFirstResponder];
+}
+//---
 @end
