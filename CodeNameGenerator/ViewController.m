@@ -19,6 +19,7 @@
 @implementation ViewController
 
 static NSString *_defaultSummaryText = @"--Enter a description for your App--";
+static CATransition *labelAnimation;
 
 -(IBAction) generateCodeName:(id)sender {
     
@@ -32,6 +33,7 @@ static NSString *_defaultSummaryText = @"--Enter a description for your App--";
                                                                         UsingVerbs2:[[self useVerbs2] isOn]];
 
     [self verifyAvailabilityOfName:lastCodeName];
+    [self setResultLabelAnimation:labelAnimation];
     [[self codeNameResult] setText:[lastCodeName displayName]];
 
     [[self saveButton] setEnabled:YES];
@@ -55,7 +57,13 @@ static NSString *_defaultSummaryText = @"--Enter a description for your App--";
     [[self verbsLabel] setTextAlignment:NSTextAlignmentCenter];
     [[self codeNameResult] setTextAlignment:NSTextAlignmentCenter];
     
-    //Setup our Summary field    
+    //Setup our Animation for the Result Label
+    labelAnimation = [CATransition animation];
+    labelAnimation.duration = 1.0;
+    labelAnimation.type = kCATransitionFade;
+    labelAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+    
+    //Setup our Summary field
     self.codeNameDesc.layer.cornerRadius = 5;
     [[[self codeNameDesc] layer] setBorderColor:[[UIColor blackColor] CGColor]];
     [[[self codeNameDesc] layer] setBorderWidth:2.3];
@@ -97,14 +105,10 @@ static NSString *_defaultSummaryText = @"--Enter a description for your App--";
         }
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            
-            CATransition *animation = [CATransition animation];
-            animation.duration = 1.0;
-            animation.type = kCATransitionFade;
-            animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-            [self.codeNameResult.layer addAnimation:animation forKey:@"changeTextTransition"];
-            
-            [self.codeNameResult setText:[NSString stringWithFormat:@"%@ \n(%@)", [self.codeNameResult text], resultText]];
+            [self setResultLabelAnimation:labelAnimation];
+            [self.codeNameResult setText:[NSString stringWithFormat:@"%@ \n(%@)",
+                                          [self.codeNameResult text],
+                                          resultText]];
             
         });
     
@@ -135,4 +139,14 @@ static NSString *_defaultSummaryText = @"--Enter a description for your App--";
     }
 }
 //---
+
+//
+//Private utility Methods
+///
+-(void) setResultLabelAnimation:(CATransition *)transition{
+    [self.codeNameResult.layer addAnimation:transition
+                                     forKey:@"changeTextTransition"];
+}
+//---
+
 @end
