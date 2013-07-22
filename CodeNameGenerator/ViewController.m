@@ -5,7 +5,7 @@
 //  Created by Barry Rowe on 4/26/13.
 //  Copyright (c) 2013 ElephanTango. All rights reserved.
 //
-
+#import <QuartzCore/QuartzCore.h>
 #import "ViewController.h"
 #import "CodeNameFactory.h"
 #import "GHRepository.h"
@@ -51,6 +51,11 @@
     [[self conceptsLabel] setTextAlignment:NSTextAlignmentCenter];
     [[self verbsLabel] setTextAlignment:NSTextAlignmentCenter];
     [[self codeNameResult] setTextAlignment:NSTextAlignmentCenter];
+    
+    self.codeNameDesc.layer.cornerRadius = 5;
+    [[[self codeNameDesc] layer] setBorderColor:[[UIColor blackColor] CGColor]];
+    [[[self codeNameDesc] layer] setBorderWidth:2.3];
+    
 }
 
 - (void)didReceiveMemoryWarning
