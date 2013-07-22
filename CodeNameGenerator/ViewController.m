@@ -18,6 +18,7 @@
 
 @implementation ViewController
 
+static NSString *_defaultSummaryText = @"--Enter a description for your App--";
 
 -(IBAction) generateCodeName:(id)sender {
     
@@ -46,16 +47,20 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    //Style up our switch labels
     [[self colorsLabel] setTextAlignment:NSTextAlignmentCenter];
     [[self animalsLabel] setTextAlignment:NSTextAlignmentCenter];
     [[self conceptsLabel] setTextAlignment:NSTextAlignmentCenter];
     [[self verbsLabel] setTextAlignment:NSTextAlignmentCenter];
     [[self codeNameResult] setTextAlignment:NSTextAlignmentCenter];
     
+    //Setup our Summary field    
     self.codeNameDesc.layer.cornerRadius = 5;
     [[[self codeNameDesc] layer] setBorderColor:[[UIColor blackColor] CGColor]];
     [[[self codeNameDesc] layer] setBorderWidth:2.3];
-    
+    [[self codeNameDesc] setText:_defaultSummaryText];
+    _codeNameDesc.delegate = self;
 }
 
 - (void)didReceiveMemoryWarning
@@ -82,14 +87,27 @@
             NSLog(@"%@ of %@ calls remaining", callsLeft, rateLimit);
         }
         ghRepos = [GHRepository reposFromJson:responseData];
+        
+        NSString *resultText = @"Unavailable on Github :(";
         if([ghRepos count] > 0){
             NSLog(@"Repository Exists with Name: %@.", searchTerm);
-            //[self.codeNameResult setText:[NSString stringWithFormat:@"%@ (%@)", [self.codeNameResult text], @"Unavailable"]];
         }else{
             NSLog(@"Repository name %@ is available!", searchTerm);
-            //[self.codeNameResult setText:[NSString stringWithFormat:@"%@ (%@)", [self.codeNameResult text], @"Available"]];
+            resultText = @"Available on GitHub!";
         }
         
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            CATransition *animation = [CATransition animation];
+            animation.duration = 1.0;
+            animation.type = kCATransitionFade;
+            animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
+            [self.codeNameResult.layer addAnimation:animation forKey:@"changeTextTransition"];
+            
+            [self.codeNameResult setText:[NSString stringWithFormat:@"%@ \n(%@)", [self.codeNameResult text], resultText]];
+            
+        });
+    
     };
     
     [NSURLConnection sendAsynchronousRequest:newReq
@@ -102,7 +120,19 @@
 //UITextFieldDelegate Protocol Implementation
 ///
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    NSLog(@"touchesBegan Called");
     [self.codeNameDesc resignFirstResponder];
+}
+
+- (void) textViewDidBeginEditing:(UITextView *)textView{
+    NSLog(@"Begin Editing FIred");
+    [textView setText:@""];
+}
+
+- (void) textViewDidEndEditing:(UITextView *)textView{
+    if([[textView text] isEqualToString:@""]){
+         [textView setText:_defaultSummaryText];
+    }
 }
 //---
 @end

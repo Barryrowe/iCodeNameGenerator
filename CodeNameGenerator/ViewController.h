@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController <UITextFieldDelegate>
+@interface ViewController : UIViewController <UITextViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UISwitch * useColors;
 @property (weak, nonatomic) IBOutlet UISwitch * useAnimals;

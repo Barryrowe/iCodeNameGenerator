@@ -24,7 +24,8 @@
 {
     self = [super initWithStyle:style];
     if (self) {
-        self.title = @"Saved Code Names";
+        //Do things here if needed. It's probably best to set
+        //  on viewDidLoad
     }
     return self;
 }
@@ -38,7 +39,7 @@
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
-    self.title = @"Saved Code Names";
+    self.title = @"Code Names";
 }
 
 - (void)didReceiveMemoryWarning
