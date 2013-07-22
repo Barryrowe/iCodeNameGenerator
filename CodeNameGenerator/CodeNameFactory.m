@@ -118,6 +118,7 @@
 -(void) removeCodeName:(CodeName *)codeName{
     [_context deleteObject:codeName];
     [codeNames removeObjectIdenticalTo:codeName];
+    [self saveChanges];
 }
 
 -(CodeName *) addCodeName:(CodeNameInfo *)codeName{
@@ -200,7 +201,8 @@
     if(maxIndex < 1){
         return @"--";
     }
-    int targetIndex = rand() % maxIndex;
+    
+    int targetIndex = arc4random_uniform(maxIndex); //rand() % maxIndex;
     NSString * randString = [searchArray objectAtIndex:targetIndex];
     //No need to do a while loop, if we're the same, the Next value can't be
     //  the same. So we just grab the next value. It's cleaner logic

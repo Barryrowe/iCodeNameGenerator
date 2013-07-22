@@ -33,8 +33,12 @@ static CATransition *labelAnimation;
                                                                         UsingVerbs2:[[self useVerbs2] isOn]];
 
     [self verifyAvailabilityOfName:lastCodeName];
-    [self setResultLabelAnimation:labelAnimation];
-    [[self codeNameResult] setText:[lastCodeName displayName]];
+    //[self setResultLabelAnimation:labelAnimation];
+    NSString *displayText = [NSString stringWithFormat:@"%@ (%@)",
+                             [lastCodeName displayName],
+                             @"Checking Github Availability" ];
+    [[self codeNameResult] setText:displayText];
+    [[self codeNameResult] setTextColor:[UIColor blueColor]];
 
     [[self saveButton] setEnabled:YES];
 }
@@ -48,14 +52,6 @@ static CATransition *labelAnimation;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    
-    //Style up our switch labels
-    [[self colorsLabel] setTextAlignment:NSTextAlignmentCenter];
-    [[self animalsLabel] setTextAlignment:NSTextAlignmentCenter];
-    [[self conceptsLabel] setTextAlignment:NSTextAlignmentCenter];
-    [[self verbsLabel] setTextAlignment:NSTextAlignmentCenter];
-    [[self codeNameResult] setTextAlignment:NSTextAlignmentCenter];
     
     //Setup our Animation for the Result Label
     labelAnimation = [CATransition animation];
@@ -63,12 +59,26 @@ static CATransition *labelAnimation;
     labelAnimation.type = kCATransitionFade;
     labelAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
     
+    //Style up our switch labels
+    [[self colorsLabel] setTextAlignment:NSTextAlignmentCenter];
+    [[self animalsLabel] setTextAlignment:NSTextAlignmentCenter];
+    [[self conceptsLabel] setTextAlignment:NSTextAlignmentCenter];
+    [[self verbsLabel] setTextAlignment:NSTextAlignmentCenter];
+    
+    //Style our Result Label
+    [[self codeNameResult] setTextAlignment:NSTextAlignmentCenter];
+    [[self codeNameResult] setTextColor:[UIColor blueColor]];
+  
+    
     //Setup our Summary field
     self.codeNameDesc.layer.cornerRadius = 5;
     [[[self codeNameDesc] layer] setBorderColor:[[UIColor blackColor] CGColor]];
     [[[self codeNameDesc] layer] setBorderWidth:2.3];
     [[self codeNameDesc] setText:_defaultSummaryText];
     _codeNameDesc.delegate = self;
+    
+    //Setup View
+    [[self view]setBackgroundColor:[UIColor lightGrayColor]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -97,18 +107,22 @@ static CATransition *labelAnimation;
         ghRepos = [GHRepository reposFromJson:responseData];
         
         NSString *resultText = @"Unavailable on Github :(";
+        UIColor *resultColor = [UIColor redColor];
+        
         if([ghRepos count] > 0){
             NSLog(@"Repository Exists with Name: %@.", searchTerm);
         }else{
             NSLog(@"Repository name %@ is available!", searchTerm);
             resultText = @"Available on GitHub!";
+            resultColor = [UIColor greenColor];
         }
         
         dispatch_async(dispatch_get_main_queue(), ^{
             [self setResultLabelAnimation:labelAnimation];
             [self.codeNameResult setText:[NSString stringWithFormat:@"%@ \n(%@)",
-                                          [self.codeNameResult text],
+                                          [lastCodeName displayName],
                                           resultText]];
+            [self.codeNameResult setTextColor:resultColor];
             
         });
     
