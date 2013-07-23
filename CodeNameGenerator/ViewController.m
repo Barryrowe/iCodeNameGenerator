@@ -144,7 +144,9 @@ static CATransition *labelAnimation;
 
 - (void) textViewDidBeginEditing:(UITextView *)textView{
     NSLog(@"Begin Editing FIred");
-    [textView setText:@""];
+    if([[textView text] isEqualToString:_defaultSummaryText]){
+        [textView setText:@""];
+    }
 }
 
 - (void) textViewDidEndEditing:(UITextView *)textView{
